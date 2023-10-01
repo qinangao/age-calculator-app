@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="form">
+        <div class="day_box flexbox1">
+          <p class="day">Day</p>
+          <input
+            type="number"
+            id="days_id"
+            placeholder="DD"
+            min="1"
+            max="31"
+            class="input_box"
+          />
+        </div>
+        <div class="month_box flexbox1">
+          <p class="month">Month</p>
+          <input
+            type="number"
+            id="month_id"
+            placeholder="MM"
+            min="1"
+            max="12"
+            class="input_box"
+          />
+        </div>
+        <div class="year_box flexbox1">
+          <p class="year">Year</p>
+          <input
+            type="number"
+            id="year_id"
+            placeholder="YYYY"
+            min="1"
+            max="2023"
+            class="input_box"
+          />
+        </div>
+      </div>
+      <div class="diversion">
+        <div class="circle">
+          <img
+            src="./assets/images/icon-arrow.svg"
+            alt="icon-arrow"
+            class="arrow"
+          />
+        </div>
+      </div>
+      <div class="result">
+        <div class="year_result_box flexbox2">
+          <p id="year_result">--</p>
+          <p class="item">years</p>
+        </div>
+        <div class="month_result_box flexbox2">
+          <p id="month_result">--</p>
+          <p class="item">months</p>
+        </div>
+        <div class="day_result_box flexbox2">
+          <p id="day_result">--</p>
+          <p class="item">days</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
