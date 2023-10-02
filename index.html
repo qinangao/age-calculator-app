@@ -19,7 +19,7 @@
     <div class="calculator">
       <div class="form">
         <div class="day_box flexbox1">
-          <p class="day">Day</p>
+          <p class="day birthday" id="day">Day</p>
           <input
             type="number"
             id="days_id"
@@ -28,9 +28,10 @@
             max="31"
             class="input_box"
           />
+          <p class="error_msg">This field is required</p>
         </div>
         <div class="month_box flexbox1">
-          <p class="month">Month</p>
+          <p class="month birthday" id="month">Month</p>
           <input
             type="number"
             id="month_id"
@@ -39,9 +40,10 @@
             max="12"
             class="input_box"
           />
+          <p class="error_msg">This field is required</p>
         </div>
         <div class="year_box flexbox1">
-          <p class="year">Year</p>
+          <p class="year birthday" id="year">Year</p>
           <input
             type="number"
             id="year_id"
@@ -50,12 +52,13 @@
             max="2023"
             class="input_box"
           />
+          <p class="error_msg">This field is required</p>
         </div>
       </div>
       <div class="diversion">
-        <div class="circle">
+        <button class="circle" type="submit" onclick="checker()">
           <img src="./images/icon-arrow.svg" alt="icon-arrow" class="arrow" />
-        </div>
+        </button>
       </div>
       <div class="result">
         <div class="year_result_box flexbox2">
@@ -78,5 +81,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+
+    <script src="index.js"></script>
   </body>
 </html>
