@@ -28,7 +28,7 @@
             max="31"
             class="input_box"
           />
-          <p class="error_msg">This field is required</p>
+          <p class="error_msg" id="date_error">This field is required</p>
         </div>
         <div class="month_box flexbox1">
           <p class="month birthday" id="month">Month</p>
@@ -40,7 +40,7 @@
             max="12"
             class="input_box"
           />
-          <p class="error_msg">This field is required</p>
+          <p class="error_msg" id="month_error">This field is required</p>
         </div>
         <div class="year_box flexbox1">
           <p class="year birthday" id="year">Year</p>
@@ -52,11 +52,11 @@
             max="2023"
             class="input_box"
           />
-          <p class="error_msg">This field is required</p>
+          <p class="error_msg" id="year_error">This field is required</p>
         </div>
       </div>
       <div class="diversion">
-        <button class="circle" type="submit" onclick="checker()">
+        <button class="circle" type="submit" onclick="calculateAge()">
           <img src="./images/icon-arrow.svg" alt="icon-arrow" class="arrow" />
         </button>
       </div>
