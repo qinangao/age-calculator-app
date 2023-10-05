@@ -46,9 +46,8 @@ body {
 .error_msg {
   text-transform: capitalize;
   font-style: italic;
-  color: var(--Light-red);
+  color: transparent;
   letter-spacing: 0;
-  display: none;
 }
 .input_box {
   width: 75px;
