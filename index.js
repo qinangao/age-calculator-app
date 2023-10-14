@@ -124,8 +124,3 @@ function calculateAge() {
   monthResult.innerHTML = months;
   dayResult.innerHTML = days;
 }
-
-function cleanError{
-  
-}
-
