@@ -1,6 +1,26 @@
 // Part 1- Check valid:
+let dateError = document.getElementById("date_error");
+let monthError = document.getElementById("month_error");
+let yearError = document.getElementById("year_error");
+let birthdayTitle = document.querySelectorAll(".birthday");
+let inputBorders = document.querySelectorAll(".input_box");
+let errorMessages = document.querySelectorAll(".error_msg");
+
+function clearData() {
+  errorMessages.forEach((item) => {
+    item.style.color = "transparent";
+  });
+
+  birthdayTitle.forEach((item) => {
+    item.style.color = "var(--Smokey-grey)";
+  });
+  inputBorders.forEach((item) => {
+    item.style.border = "1.5px solid var(--Light-grey)";
+  });
+}
 
 function calculateAge() {
+  clearData();
   let dayValue = parseInt(document.getElementById("days_id").value);
   let monthValue = parseInt(document.getElementById("month_id").value);
   let yearValue = parseInt(document.getElementById("year_id").value);
@@ -8,13 +28,6 @@ function calculateAge() {
   let monthResult = document.getElementById("month_result");
   let yearResult = document.getElementById("year_result");
 
-  let dateError = document.getElementById("date_error");
-  let monthError = document.getElementById("month_error");
-  let yearError = document.getElementById("year_error");
-
-  let inputBorders = document.querySelectorAll(".input_box");
-  let errorMessages = document.querySelectorAll(".error_msg");
-  let birthdayTitle = document.querySelectorAll(".birthday");
   let dash = document.querySelectorAll(".dash");
 
   const today = new Date();
@@ -90,18 +103,20 @@ function calculateAge() {
   }
 
   // Check if the input year is in the past
-  // if (birthDate > today) {
-  //   dateError.style.color = "var(--Light-red)";
-  //   dateError.innerHTML = "Must be a valid date";
-  //   birthdayTitle.forEach((item) => {
-  //     item.style.color = "var(--Light-red)";
-  //   });
-  //   inputBorders.forEach((item) => {
-  //     item.style.border = "3px solid var(--Light-red)";
-  //   });
+  if (birthDate > today) {
+    dateError.style.color = "var(--Light-red)";
+    dateError.innerHTML = "Must be a valid date";
+    monthError.style.color = "var(--Light-red)";
+    monthError.innerHTML = "Must be a valid date";
+    birthdayTitle.forEach((item) => {
+      item.style.color = "var(--Light-red)";
+    });
+    inputBorders.forEach((item) => {
+      item.style.border = "3px solid var(--Light-red)";
+    });
 
-  //   return;
-  // }
+    thereIsAnError = true;
+  }
   if (thereIsAnError) return;
 
   let years = today.getFullYear() - birthDate.getFullYear();
